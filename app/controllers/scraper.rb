@@ -12,7 +12,7 @@ BASE_URL = scraper.get('http://www.worstroom.com/')
 
 results = []
 
-tags = []
+# tags = []
 
 # that = scraper.get(BASE_URL).search('a.tag').map { |tag|
 # 	binding.pry
@@ -27,12 +27,8 @@ postings = scraper.get(BASE_URL).search('li.post').map { |li|
 	else
 		tags = []
 
-		li.xpath('a').each do |a|
-  			# dt = a.xpath("preceding-sibling::a[1]")
-  			## Insert new Ruby magic here ##
-  			tags << a
-  			bingind.pry
-		end
+
+		# how to get sibiling nodes???
 
 		# a = li.xpath("preceding-sibling::a[1]").text
 		# if a == "" 
@@ -46,14 +42,12 @@ postings = scraper.get(BASE_URL).search('li.post').map { |li|
 		# 	binding.pry
 		# end
 
-
-
-
 		binding.pry
 		# grabs date of post
 		date = li.search('div.meta h2 a').text
 		# grabs image url of post
-		# image = li.search('div.content div.photo a img').attr("src").value
+		image = li.search('div.content div.photo a img').attr("src").value
+		binding.pry
 		full_caption = li.search('div.content div.caption').text
 		# grabs price for rental 
 		price = full_caption.split(".")[1].strip
@@ -77,6 +71,6 @@ postings = scraper.get(BASE_URL).search('li.post').map { |li|
 		# get location of post
 		location = full_caption.split(".")[0]
 
-		results << ["date": date, "caption": reformatted_caption, "location": location, "price": price]
+		results << ["date": date, "image": image, "caption": reformatted_caption, "location": location, "price": price]
 	end
 }
