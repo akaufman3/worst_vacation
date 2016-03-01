@@ -18,3 +18,7 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+
+every '0 2 0 */2 mon' do
+	rake "scraper"
+end
