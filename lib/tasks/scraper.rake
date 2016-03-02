@@ -80,9 +80,9 @@ task :scrape => [:environment] do
 				end
 				# grab a random number between 1 and 10 for the number of ppl that can rent a room
 				accomodates = rand(1..10)
-
-				results << ["date": date, "image": image, "caption": reformatted_caption, "location": location, "price": price, "accomodates": accomodates]
-
+				if Listing.find_by( photo_url: image ) == nil
+					results << ["date": date, "image": image, "caption": reformatted_caption, "location": location, "price": price, "accomodates": accomodates]
+				end
 			end
 		}
 

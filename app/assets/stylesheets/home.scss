@@ -1,0 +1,53 @@
+.banner-container {
+	position: relative;
+
+	.banner {
+	    position: absolute;
+		margin: auto;
+	    top: 15%;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+
+		.header.panel {
+			  margin: 3rem auto;
+			  border: 2px solid #444;
+			  background: #fff;
+			  
+			p {
+			    font: 1rem "Avenir Next";
+			    padding: 1rem 2rem 2rem 2rem;
+			    margin-top: -1.25rem;
+			    
+			    span {
+			      text-transform: uppercase;
+			      letter-spacing: 1px;
+			      font-size: 75%;
+			      font-weight: bold;
+			    }
+			}
+		  
+			.sign {
+			    background:#fff;
+			    width: 250px;
+			    height: 2.4rem;
+			    border: 2px solid #444;
+			    position: relative;
+			    top: -1.5rem;
+			    margin: auto;
+		    
+			    h1 {
+			      text-transform: uppercase;
+			      font: bolder 0.875rem "Avenir Next";
+			      letter-spacing: 3px;
+			      color: #666;
+			      font-size: 70%;
+			      text-align: center;
+			      line-height: 2rem;
+			    }
+		  	}
+		}
+
+	}
+
+}
