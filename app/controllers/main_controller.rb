@@ -1,7 +1,6 @@
 class MainController < ApplicationController
  	def home
- 		@listings = Listing.all
- 		@last_four = Listing.all.slice(-4, 4)
+ 		@last_eight = Listing.all.slice(-8, 8)
  		render:home
  	end
 
