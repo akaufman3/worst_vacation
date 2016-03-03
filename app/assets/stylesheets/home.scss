@@ -2,6 +2,9 @@
 
 $blurred-img:"http://i.imgur.com/nGZ7soE.gif";
 
+body {
+	background-color: #F9FCFA;
+}
 .top-bar {
 	background: transparent !important;
     border-bottom: 0;
@@ -206,5 +209,99 @@ p {
   }
 }
 
+.main-listings.row {
+	// background-color: #2B2F33;
+	padding: 3rem;
+	max-width: 83rem;
+	
+	.column {
+    	padding-top: 1rem;
+    	background-color: RGB(228, 228, 228);
+    	width: 18rem;
+   		margin-right: 1rem;
+    	margin-bottom: 1rem;
+    	// background: linear-gradient(rgba(110, 99, 103, 0.45), rgba(255, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1417217601328-d3c66e6f1d48?crop=entropy&fit=crop&fm=jpg&h=825&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1325')center / cover;
+		
+		.img_container { 
+			margin:0; 
+			position:relative;
 
+			.image-content {
+				width: 85%;
+			    height: 85%;
+			    margin-left: auto;
+			    margin-right: auto;
+			    padding-top: 21%;
+			    border: 2px solid white;
+			    left: 50%;
+			    top: 50%;
+			    -webkit-transform: translate(-50%, -50%);
+			    -moz-transform: translate(-50%, -50%);
+			    transform: translate(-50%, -50%);
+			    position: absolute;
+			    z-index: 100000;
+
+				h5 {
+		    	    font-family: Roboto;
+				    font-weight: bold;
+				    font-size: 1.45rem;
+				    color: white;
+				    position: relative;
+				    z-index: 10000;
+				    text-align: center;
+    			}   
+
+		    	p {
+		    		float: left;
+				    font-family: Roboto;
+				    color: #E1E7EC;
+				    font-weight: bold;
+				    font-size: 0.95rem;
+				    position: relative;
+				    z-index: 10000;
+				    text-align: center;
+				    clear: both;
+				    width: 100%;
+		    	}
+			}
+		} 
+
+		.img_container:after { 
+			content:''; 
+			display:block; 
+			position:absolute; 
+			width: 100%; 
+			height: 100%; 
+			background: RGB(41, 45, 50);
+			opacity: 0.80;
+			z-index:1; 
+			top:0;
+		}
+
+    	a {
+    		border: 2px solid #767B80;
+    		color: #767B80;
+		    font-family: Roboto;
+		    text-transform: uppercase;
+		    letter-spacing: 0.75rem;
+		    font-weight: bold;
+		    background-color: transparent;
+		    margin-top: 1rem;
+    	}
+	}
+}
+
+.callout.primary {
+	width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent !important;
+    border: 1px solid RGB(41, 45, 50);
+
+    h3 {
+    	font-size: 1.5rem;
+    	font-family: roboto;
+    	text-align: center;
+    }
+}
 
