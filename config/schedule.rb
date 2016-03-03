@@ -19,6 +19,18 @@
 
 # Learn more: http://github.com/javan/whenever
 
-every '0 2 0 */2 mon' do
-	rake "scraper"
+# every 2.weeks do 
+# 	rake "scrape"
+# end
+
+# every two weeks
+# every '0 4 8-14 * *' do
+# 	rake "scrape"
+# end
+
+# every minute
+every '* * * * *' do
+	rake "scrape"
 end
+
+

@@ -1,53 +1,210 @@
-.banner-container {
+@import "compass/css3";
+
+$blurred-img:"http://i.imgur.com/nGZ7soE.gif";
+
+.top-bar {
+	background: transparent !important;
+    border-bottom: 0;
+    z-index: 1000;
+    top: 20px;
+    width: 100%;
+    position: absolute;
+
+    ul {
+    	background-color: transparent !important;
+
+    	a {
+    		font-family: Roboto;
+		    font-size: 1.25rem;
+		    color: white;
+		    font-weight: bold;
+    	}
+    } 
+
+    .top-bar-left {
+    	padding-left: 1.5rem;
+
+    	svg {
+    		height: 70px;
+    		float: left;
+    	}
+
+    	p {
+    		float: left;
+		    font-size: 1.5rem;
+		    font-family: Roboto;
+		    color: white;
+		    font-weight: bold;
+		    padding-top: 0.5rem;
+		    padding-left: 1rem;
+    	}
+    }
+}
+
+.banner-container{
 	position: relative;
+}
+.blurred-bg{
 
-	.banner {
-	    position: absolute;
-		margin: auto;
-	    top: 15%;
-	    right: 0;
-	    bottom: 0;
-	    left: 0;
+	background-image:url($blurred-img);
+	background-repeat:no-repeat;
+	@include background-size(cover);
+	background-attachment: fixed;
+   
+	&.tinted{
+		@include background-image(linear-gradient(0deg, #000000, rgba(255, 255, 255, 0.2)),url($blurred-img));
+	}
+	&.shaded{
+		@include background-image(linear-gradient(0deg, rgba(0,0,0,.2),rgba(0,0,0,.2)),url($blurred-img));
+	}
+}
+.box {
+	width: 345px;
+    height: 560px;
+    left: -webkit-calc( 50% - 175px );
+    top: 13%;
+    position: absolute;
+    border: 0.5px solid #777777;
+	padding: 10px;
+	text-align: center;
+	@include box-sizing(border-box);
+	text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  	display: flex;
+  	transition: box-shadow .3s ease;
+  
+	.content {
+		margin-left: 11.5%;
+	    width: 80%;
 
-		.header.panel {
-			  margin: 3rem auto;
-			  border: 2px solid #444;
-			  background: #fff;
-			  
-			p {
-			    font: 1rem "Avenir Next";
-			    padding: 1rem 2rem 2rem 2rem;
-			    margin-top: -1.25rem;
-			    
-			    span {
-			      text-transform: uppercase;
-			      letter-spacing: 1px;
-			      font-size: 75%;
-			      font-weight: bold;
-			    }
-			}
-		  
-			.sign {
-			    background:#fff;
-			    width: 250px;
-			    height: 2.4rem;
-			    border: 2px solid #444;
-			    position: relative;
-			    top: -1.5rem;
-			    margin: auto;
-		    
-			    h1 {
-			      text-transform: uppercase;
-			      font: bolder 0.875rem "Avenir Next";
-			      letter-spacing: 3px;
-			      color: #666;
-			      font-size: 70%;
-			      text-align: center;
-			      line-height: 2rem;
-			    }
-		  	}
-		}
+	    .logo {
+	    	margin-top: 3.75rem;
+    		margin-bottom: 3rem;
 
+    		img {
+    			height: 50px;
+    			width: 90px;
+    		}
+	    }
 	}
 
+	.banner-destination {
+		height: 50px;
+    	padding-top: 2rem;
+
+		.banner-left-current {
+			float: left;
+
+			p {
+				font-size: 2rem;
+	    		font-weight: 300;
+			}
+		}
+
+		.banner-right-current {
+			float: right;
+
+			p {
+				font-size: 2rem;
+	    		font-weight: 300;
+			}
+		}
+
+		.banner-des-icon {
+			float: left;
+	    	padding-left: 1.35rem;
+
+	    	svg {
+	    		height: 86px;
+	    		bottom: 0.5rem;
+	    		position: relative;
+	    		fill: #B9BFD9;
+			}
+		}
+	}
+
+	.destination-details {
+    	bottom: 3rem;
+    	position: relative;
+	    height: 50px;
+	    
+	    .left-current-details {
+	    	float: left;
+	    	clear: both;
+	    	
+	    	span {
+				font-weight: 200;
+	    	}
+	    }
+
+	    .right-current-details {
+	    	float: right;
+
+	    	span {
+	    		font-weight: 200;
+	    	}
+	    }
+	}
+
+	.type-flight {
+		font-size: 1.25rem;
+	    position: relative;
+	    height: 10px;
+	    position: relative;
+	    margin-top: 0.5rem;
+	    padding-top: 0.65rem;
+	}
+
+	.book-button {
+		border: 1px solid #B9BFD9;
+	    position: relative;
+	    margin-top: 7rem;
+	    padding-top: 0.65rem;
+
+	    p {
+			font-size: 1.55rem;
+	    }
+	}
 }
+
+h1,h2,a,p {
+	color: #B9BFD9;
+	font-weight: 100;
+  
+	.tinted & {
+		color: #B9BFD9;
+		text-shadow: 0 1px 1px rgba(255,255,255,.2);
+	}
+}
+
+.tinted h1 {
+	font-family: Roboto;
+    font-weight: 100;
+    font-size: 1.55rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: #FFFFFF;
+}
+
+h2 { font-size: 14px }
+
+p { 
+ 	margin: 20px;
+  	
+  	&.related {
+	    text-transform: uppercase;
+	    font-weight: 700;
+	    color: white;
+    
+    a {
+      font-weight: 700;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+

@@ -26,6 +26,8 @@ task :scrape => [:environment] do
 	another_page = true
 	page_num = 2
 
+	total = 0
+
 	while another_page == true
 		postings = page.search('li.post').map { |li| 
 			if li.at_css('div.video-post')
@@ -80,8 +82,12 @@ task :scrape => [:environment] do
 				end
 				# grab a random number between 1 and 10 for the number of ppl that can rent a room
 				accomodates = rand(1..10)
-				if Listing.find_by( photo_url: image ) == nil
+				# skip if  
+				if Listing.find_by( photo_url: image ) == nil && location != nil && location != '' && reformatted_caption != ''
+					puts "inserted result: #{image}"
 					results << ["date": date, "image": image, "caption": reformatted_caption, "location": location, "price": price, "accomodates": accomodates]
+				else
+					puts "skipped result: #{image}"
 				end
 			end
 		}
@@ -95,10 +101,14 @@ task :scrape => [:environment] do
 				description = x[:caption]
 				price = x[:price]
 				accomodates = x[:accomodates]
-
-				Listing.create(date_posted: date_posted, location: location, photo_url: photo_url, description: description, price: price, accommodates_num: accomodates)
+				if Listing.find_by( photo_url: x[:photo_url] ) == nil 
+					Listing.create(date_posted: date_posted, location: location, photo_url: photo_url, description: description, price: price, accommodates_num: accomodates)
+				end
 			end
 		end
+
+		puts "saved #{results.length}"
+		total += results.length
 
 
 		check_back_link = page.search('body div#footer div#pagination p.back a')
@@ -111,6 +121,7 @@ task :scrape => [:environment] do
 			another_page = false
 		end
 	end
+	puts "saved total: #{total}"
 
 end
 
