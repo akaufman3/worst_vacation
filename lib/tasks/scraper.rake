@@ -103,8 +103,6 @@ task :scrape => [:environment] do
 				accomodates = x[:accomodates]
 				if Listing.find_by( photo_url: x[:photo_url] ) == nil
 					listing = Listing.create(date_posted: date_posted, location: location, photo_url: photo_url, description: description, price: price, accommodates_num: accomodates)
-					id = listing.id
-					scraper.get(photo_url).save "public/listing_images/#{id}.jpg" 
 				end
 			end
 		end
