@@ -15,5 +15,5 @@
 //= require foundation
 //= require turbolinks
 //= require_tree .
-
+//= require foundation-datepicker/js/foundation-datepicker.js
 $(function(){ $(document).foundation(); });

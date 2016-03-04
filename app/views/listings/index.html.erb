@@ -1,1 +1,14 @@
-<h1> index</h1>
+<div class="main-listings row small-up-2 large-up-4">
+	<% @listings.each do |listing| %>
+        <div class="column">
+            <div class=img_container>
+                <div class="image-content">
+                    <h5><%= listing.location %></h5>
+                    <p><%= listing.price %>/wk</p>
+                </div>
+                <%= image_tag("/listing_images/#{listing.id}.jpg") %>
+            </div>
+            <a href="/listings/<%= listing.id %>" class="button expanded">Attempt</a>
+        </div>
+    <% end%>
+</div>
