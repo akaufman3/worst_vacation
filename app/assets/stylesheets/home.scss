@@ -172,6 +172,7 @@ body {
 h1,h2,a,p {
 	color: #B9BFD9;
 	font-weight: 100;
+	font-family: Roboto;
   
 	.tinted & {
 		color: #B9BFD9;
@@ -188,7 +189,10 @@ h1,h2,a,p {
     color: #FFFFFF;
 }
 
-h2 { font-size: 14px }
+h2 { 
+	font-size: 14px;
+	font-family: Roboto;
+}
 
 p { 
  	margin: 20px;
@@ -207,6 +211,18 @@ p {
       }
     }
   }
+}
+
+.row {
+	h2 {
+		font-family: Roboto;
+		font-weight: bold;
+		padding-top: 1rem;
+	}
+
+	p {
+		color: RGB(130, 141, 154);
+	}
 }
 
 .main-listings.row {
@@ -303,5 +319,168 @@ p {
     	font-family: roboto;
     	text-align: center;
     }
+}
+
+$breakpoint-tablet: 1311px;
+@media (max-width: $breakpoint-tablet) {
+	.main-listings.row {
+	    max-width: 63rem;
+	}
+}
+
+$breakpoint-tablet: 1019px;
+@media (max-width: $breakpoint-tablet) {
+	.main-listings.row {
+	    max-width: 43rem;
+
+	    .column:nth-child(even) {
+			margin-right: 0;
+		}
+	}
+}
+
+$breakpoint-tablet: 1000px;
+@media (max-width: $breakpoint-tablet) {
+  .box {
+  	width: 600px;
+    height: 441px;
+    left: -webkit-calc( 50% - 304px );
+    top: 20%;
+
+    .content {
+    	margin-left: 10.6%;
+    	width: 80%;
+
+    	.logo {
+    		margin-top: 1.75rem;
+    		margin-bottom: 1rem;
+
+    	}
+
+    	.banner-destination {
+    		height: 50px;
+		    padding-top: 2rem;
+		    width: 68%;
+		    margin-left: auto;
+		    margin-right: auto;
+
+		    .banner-des-icon {
+		    	padding-left: 2.65rem;
+		    }
+    	}
+    	
+    	.destination-details {
+    		bottom: 3rem;
+		    position: relative;
+		    height: 50px;
+		    width: 69%;
+		    margin-left: auto;
+		    margin-right: auto;
+    	}
+
+    	.type-flight {
+    		font-size: 1.25rem;
+		    position: relative;
+		    height: 10px;
+		    position: relative;
+		    margin-top: 0.5rem;
+		    padding-top: 0.65rem;
+		    margin-left: auto;
+		    margin-right: auto;
+		    width: 19%;
+    	}
+
+    	.book-button {
+    		border: 1px solid #B9BFD9;
+		    position: relative;
+		    margin-top: 5rem;
+		    padding-top: 0.65rem;
+    	}
+    }
+
+  }
+}
+
+$breakpoint-tablet: 880px;
+@media (max-width: $breakpoint-tablet) {
+	.top-bar-left {
+		display: none;
+	}
+
+	.top-bar-right {
+		float: left !important;
+	}
+	.box {
+		width: 100%;
+	    left: 0;
+    	position: relative;
+	}
+
+	.banner-container {
+		img {
+			display: none;
+		}
+
+		.content {
+			.logo {
+				margin-top: 7.75rem;
+    			margin-bottom: 1rem;
+
+    			img {
+    				display: inline-block;
+    			}
+			}
+
+			.banner-destination {
+				display: none;
+			}
+
+			.destination-details {
+				display: none;
+			}
+
+			.type-flight {
+				display: none;
+			}
+
+			.book-button {
+				margin-top: 2rem;
+			    margin-bottom: 2rem;
+			    padding-top: 0.65rem;
+			    width: 50%;
+			    margin-left: auto;
+			    margin-right: auto;
+			}
+		}
+	}
+
+	.main-listings.row {
+		max-width: 43rem;
+
+		.column:nth-child(even) {
+			margin-right: 0;
+		}
+	}
+}
+
+$breakpoint-tablet: 688px;
+@media (max-width: $breakpoint-tablet) {
+	
+	.banner-container {
+		background-image: none;
+    	background-color: black;
+    	background-size: 0;
+
+    	.blurred-bg.tinted {
+			background-image: none;
+			background: RGB(41, 45, 50);
+		}
+
+	}
+
+
+	.main-listings.row {
+		max-width: 24rem;
+	}
 }
 
