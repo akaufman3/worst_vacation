@@ -1,0 +1,22 @@
+{
+  "name": "worst_vacation",
+  "homepage": "https://github.com/akaufman3/worst_vacation",
+  "authors": [
+    "Amelia Kaufman <amelia.kaufman@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-datepicker": "^1.5.0"
+  }
+}

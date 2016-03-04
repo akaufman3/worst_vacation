@@ -1,0 +1,23 @@
+.listing {
+	.row.medium-8.large-7.columns {
+		margin-top: 10%;
+
+		p {
+			float: left;
+		}
+
+		.callout {
+			float: left;
+		}
+
+		.image-container {
+			float: left;
+		    clear: both;
+		    position: relative;
+		}
+
+		.medium-6.large-5.columns {
+			float: right;
+		}
+	}
+}
