@@ -24,13 +24,13 @@
 # end
 
 # every two weeks
-# every '0 4 8-14 * *' do
-# 	rake "scrape"
-# end
-
-# every minute
-every '* * * * *' do
+every '0 4 8-14 * *' do
 	rake "scrape"
 end
+
+# every minute
+# every '* * * * *' do
+# 	rake "scrape"
+# end
 
 
