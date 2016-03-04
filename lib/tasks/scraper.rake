@@ -113,7 +113,7 @@ task :scrape => [:environment] do
 					scraper.get(photo_url).save(original_image_path)
 					# using MiniMagick for image resizing
 					original = MiniMagick::Image.open(original_image_path)
-					default = original.resize('300x400')
+					default = original.resize('394x420')
 
 
 					# resize_w_crop minimagick approach by maxicak https://gist.github.com/maxivak/3924976

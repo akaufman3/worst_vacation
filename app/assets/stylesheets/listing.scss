@@ -1,6 +1,36 @@
 .listing {
+	.top-bar {
+		// background-color: RGB(163, 189, 227) !important;
+	    opacity: 0.85;
+	    border-bottom: 0;
+	    z-index: 1000;
+	    top: 0;
+	    padding-top: 1rem !important;
+	    width: 100%;
+	    position: absolute;
+
+	    p {
+	    	color: RGB(41, 45, 50);
+	    }
+
+	    a {
+	    	color: RGB(41, 45, 50);
+	    }
+	}
+
 	.row.medium-8.large-7.columns {
 		margin-top: 10%;
+		background-color: RGB(228, 228, 228);
+    	padding: 2rem;
+
+    	h3 {
+    		font-family: Roboto;
+    		font-weight: 800;
+
+    		small {
+    			color: RGB(118, 123, 128);
+    		}
+    	}
 
 		p {
 			float: left;
@@ -21,5 +51,21 @@
 		.medium-6.large-5.columns {
 			float: right;
 		}
+	}
+}
+
+$breakpoint-tablet: 1250px;
+@media (max-width: $breakpoint-tablet) {
+	.medium-6.large-5.columns {
+		float: left;
+    	width: 100%;
+	}
+}
+
+
+$breakpoint-tablet: 400px;
+@media (max-width: $breakpoint-tablet) {
+	section {
+		padding-top: 5%;
 	}
 }

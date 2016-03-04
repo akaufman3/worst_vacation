@@ -1,3 +1,15 @@
+<div class="top-bar">
+  <div class="top-bar-left">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 100 125"><defs><g id="a"><path fill="#FFFFFF" stroke="none" d=" M 81.85 81.85 Q 95 68.65 95 50 95 31.35 81.85 18.2 68.65 5 50 5 31.35 5 18.2 18.2 5 31.35 5 50 5 68.65 18.2 81.85 31.35 95 50 95 68.65 95 81.85 81.85 M 50 12.6 Q 65.55 12.6 76.45 23.55 87.45 34.55 87.45 50 87.45 65.55 76.45 76.45 65.55 87.45 50 87.45 34.55 87.45 23.55 76.45 12.6 65.55 12.6 50 12.6 34.55 23.55 23.55 34.55 12.6 50 12.6 M 27.05 71.2 Q 28.25 71.25 29.15 70.5 49.8 52.45 70.5 70.5 71.4 71.25 72.65 71.2 73.85 71.1 74.7 70.2 75.45 69.25 75.4 68.05 75.3 66.8 74.4 66.05 49.8 44.6 25.3 66.05 24.35 66.8 24.25 68.05 24.2 69.25 25.05 70.2 25.8 71.1 27.05 71.2 M 27.65 39.65 Q 26.4 39.75 25.65 40.7 24.9 41.65 25.05 42.85 25.15 44.1 26.1 44.85 27.05 45.6 28.25 45.5 L 35.8 44.7 Q 37.05 44.55 37.8 43.6 38.55 42.65 38.45 41.4 38.3 40.2 37.4 39.45 36.4 38.65 35.2 38.8 L 27.65 39.65 M 69 48.25 Q 71.55 48.25 73.3 46.45 75.15 44.7 75.15 42.15 75.15 39.55 73.3 37.75 71.55 36 69 36 66.45 36 64.6 37.75 62.9 39.55 62.9 42.15 62.9 44.7 64.6 46.45 66.45 48.25 69 48.25 Z"/></g></defs><g transform="matrix( 1, 0, 0, 1, 0,0) "><use xlink:href="#a"/></g><text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"></svg>
+    <p>CHOOSE WISELY...</p>
+  </div>
+  <div class="top-bar-right">
+      <ul class="menu">
+          <li><%= link_to "Log out", '/logout', method: "delete" %></li>
+          <li><a href="/login">Login</a></li>
+      </ul>
+  </div>
+</div>
 <div class="banner-container blurred-bg tinted">
 	<img src="http://i.giphy.com/HmTLatwLWpTQk.gif">
     <div id="box1" class="box blurred-bg tinted">
@@ -60,170 +72,9 @@
         </div>
     </a>
 </div>
-<!-- <hr> -->
-<!-- <div class="row column">
-    <div class="callout primary">
-    <h3>Really big special this week on items.</h3>
-    </div>
-</div>
-<hr>
-<div class="row column text-center">
-<h2>Some Other Neat Products</h2>
-<hr>
-</div>
-<div class="row small-up-2 medium-up-3 large-up-6">
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/300x400">
-<h5>Nulla At Nulla Justo, Eget</h5>
-<p>$400</p>
-<a href="#" class="button small expanded hollow">Buy</a>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/300x400">
-<h5>Nulla At Nulla Justo, Eget</h5>
-<p>$400</p>
-<a href="#" class="button small expanded hollow">Buy</a>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/300x400">
-<h5>Nulla At Nulla Justo, Eget</h5>
-<p>$400</p>
-<a href="#" class="button small expanded hollow">Buy</a>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/300x400">
-<h5>Nulla At Nulla Justo, Eget</h5>
-<p>$400</p>
-<a href="#" class="button small expanded hollow">Buy</a>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/300x400">
-<h5>Nulla At Nulla Justo, Eget</h5>
-<p>$400</p>
-<a href="#" class="button small expanded hollow">Buy</a>
-</div>
-<div class="column">
-<img class="thumbnail" src="http://placehold.it/300x400">
-<h5>Nulla At Nulla Justo, Eget</h5>
-<p>$400</p>
-<a href="#" class="button small expanded hollow">Buy</a>
-</div>
-</div>
-<hr>
-<div class="row">
-<div class="medium-4 columns">
-<h4>Top Products</h4>
-<div class="media-object">
-<div class="media-object-section">
-<img class="thumbnail" src="http://placehold.it/100x100">
-</div>
-<div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
-</div>
-</div>
-<div class="media-object">
-<div class="media-object-section">
-<img class="thumbnail" src="http://placehold.it/100x100">
-</div>
-<div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
-</div>
-</div>
-<div class="media-object">
-<div class="media-object-section">
-<img class="thumbnail" src="http://placehold.it/100x100">
-</div>
-<div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
-</div>
-</div>
-</div>
-<div class="medium-4 columns">
-<h4>Top Products</h4>
-<div class="media-object">
-<div class="media-object-section">
-<img class="thumbnail" src="http://placehold.it/100x100">
-</div>
-<div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
-</div>
-</div>
-<div class="media-object">
-<div class="media-object-section">
-<img class="thumbnail" src="http://placehold.it/100x100">
-</div>
-<div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
-</div>
-</div>
-<div class="media-object">
-<div class="media-object-section">
-<img class="thumbnail" src="http://placehold.it/100x100">
-</div>
-<div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
-</div>
-</div>
-</div>
-<div class="medium-4 columns">
-<h4>Top Products</h4>
-<div class="media-object">
-<div class="media-object-section">
-<img class="thumbnail" src="http://placehold.it/100x100">
-</div>
-<div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
-</div>
-</div>
-<div class="media-object">
-<div class="media-object-section">
-<img class="thumbnail" src="http://placehold.it/100x100">
-</div>
-<div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
-</div>
-</div>
-<div class="media-object">
-<div class="media-object-section">
-<img class="thumbnail" src="http://placehold.it/100x100">
-</div>
-<div class="media-object-section">
-<h5>Nunc Eu Ullamcorper Orci</h5>
-<p>Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.</p>
-</div>
-</div>
-</div>
-</div> -->
 <div class="callout large secondary">
 <div class="row">
 <div class="large-4 columns">
-<h5>Vivamus Hendrerit Arcu Sed Erat Molestie</h5>
-<p>Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit.</p>
+<text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Amelia Kaufman © 2016</text><br>
+<text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Face icon created by Miso Duzek</text><text x="0" y="120" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text>
 </div>
-</div>
-<div class="large-3 large-offset-2 columns">
-<ul class="menu vertical">
-<li><a href="#">One</a></li>
-<li><a href="#">Two</a></li>
-<li><a href="#">Three</a></li>
-<li><a href="#">Four</a></li>
-</ul>
-</div>
-<div class="large-3 columns">
-<ul class="menu vertical">
-<li><a href="#">One</a></li>
-<li><a href="#">Two</a></li>
-<li><a href="#">Three</a></li>
-<li><a href="#">Four</a></li>
-</ul>
-</div>
-</div>
-<text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Daniele Catalanotto</text><text x="0" y="120" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text>

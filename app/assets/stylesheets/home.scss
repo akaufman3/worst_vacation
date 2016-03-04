@@ -225,8 +225,14 @@ p {
 	}
 }
 
+.row.column.text-center {
+	width:70%;
+	margin-top: 3rem;
+}
+
 .main-listings.row {
 	// background-color: #2B2F33;
+	margin-top: 0rem !important;
 	padding: 3rem;
 	max-width: 83rem;
 	
