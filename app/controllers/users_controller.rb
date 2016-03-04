@@ -64,14 +64,13 @@ class UsersController < ApplicationController
 
   def login
     if request.method == 'POST'
-      binding.pry
       user = User.find_by(email: params['email'])
         # checks the db for a user that matches the name submitted.
 
       if user && user.authenticate(params['password'])
         #if user exists and password is legit then.....
         session[:user_id] = user.id
-
+        redirect_to('/')
       else
         render :login
       end
