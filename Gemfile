@@ -44,6 +44,8 @@ gem 'compass-rails'
 
 gem 'mini_magick'
 
+gem 'rails_12factor'
+
 
 
 group :development, :test do
