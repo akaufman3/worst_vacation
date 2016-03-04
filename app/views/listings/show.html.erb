@@ -2,7 +2,7 @@
  
 <div class="row medium-8 large-7 columns">
     <div class="blog-post">
-        <h3><%= @listing.location %></h3>
+        <h3><%= @listing.location %> <small><%= @listing.price %></small> </h3>
         <div class="image-container">
             <img class="thumbnail" src="/listing_images/<%= @listing.id %>.original.jpg">
         </div>
