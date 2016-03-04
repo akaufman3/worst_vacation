@@ -46,6 +46,8 @@ gem 'mini_magick'
 
 gem 'rails_12factor'
 
+gem 'pry'
+
 
 
 group :development, :test do
